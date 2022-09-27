@@ -14,7 +14,7 @@ This extension includes a greeting, a search box, 6 customizable shortcuts, and 
 To download this extension, go to code -> Download ZIP.  
 ![alt text](https://lh3.googleusercontent.com/pw/AL9nZEXlW4sMZ5_9mXRDmTWQvw19yzNIQ-BvknZ9tVgcv0w1Z1GxrmcY5r1UFcwCyVxRxeJGw3MuTyrBqhU8RKNnPDAcYCgKnb-mjUs0Qv_vu0u79NoajgRqBTjuy5waRw3C0sEcqbyNi7wXmLnn0ZNR9qRZ=w490-h336-no?authuser=0 "Download ZIP")
   
-Unzip the folder, and go to chrome://extensions/. Turn on developer mode for google chrome extensions, and load it as an unpacked extension.  
+Unzip the folder, and go to **chrome://extensions/**. Turn on developer mode for google chrome extensions, and load it as an unpacked extension.  
 ![alt text](https://lh3.googleusercontent.com/pw/AL9nZEXsoCnCFdLZXtWeYtLr5f_xXl5quOjr14c-QzFyIblVfO4kSVgx09ViQZ1NyHFblgR78j1yojTRFBeU93rOXbZg-ebnaZ_EfLHy739R41OmcTfiAmCU9o2bL9PZeYW9YGQ8MnHb6wW5QM4gOEy2IKkF=w1600-h103-no?authuser=0 "Load Unpacked")
   
   
