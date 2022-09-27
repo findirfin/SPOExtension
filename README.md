@@ -16,4 +16,5 @@ To download this extension, go to code -> Download ZIP.
 Unzip the folder, turn on developer mode for google chrome extensions, and load it as an unpacked extension.  
 ![alt text](https://lh3.googleusercontent.com/pw/AL9nZEXsoCnCFdLZXtWeYtLr5f_xXl5quOjr14c-QzFyIblVfO4kSVgx09ViQZ1NyHFblgR78j1yojTRFBeU93rOXbZg-ebnaZ_EfLHy739R41OmcTfiAmCU9o2bL9PZeYW9YGQ8MnHb6wW5QM4gOEy2IKkF=w1600-h103-no?authuser=0 "Load Unpacked")
   
+  
 To edit the shortcuts, click on the extension icon in the extensions bar, and select "Customize Shortcuts"
