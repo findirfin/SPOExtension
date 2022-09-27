@@ -1,0 +1,284 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+:root {
+  --bgcolor: #f0f0f0;
+  --regtext: #000000;
+  --formbg: #b6b6b6;
+  --formborder: #616161;
+  --formhover: #9c9c9c;
+  --track: #a8a8a8;
+  --thumb: rgb(94, 94, 94);
+  --thumbhover: rgb(85, 85, 85);
+  --shortcutbg: rgb(216, 216, 216);;
+  --shortcut: rgb(75, 75, 75);
+  --tooltipbg: rgba(107, 107, 107, 0.432);
+  --tooltiptext: rgb(43, 43, 43);
+  --selection: rgb(48, 48, 48);
+  --selectionbg: rgb(168, 168, 168);
+
+  --fontStack: "IBM Plex Mono", "Input Mono", "SF Mono", Consolas, monospace;
+}
+
+.darkmode {
+
+  --regtext: #f7f7f7;
+  --formbg: #2c2c2c;
+  --formborder: #616161;
+  --formhover: #202020;
+  --track: #4b4b4b;
+  --thumb: rgb(189, 189, 189);
+  --thumbhover: rgb(160, 160, 160);
+  --shortcutbg: rgb(221, 221, 221);
+  --shortcut: rgb(160, 160, 160);
+  --tooltipbg: rgba(3, 3, 3, 0.432);
+  --tooltiptext: rgb(160, 160, 160);
+  --selection: rgb(48, 48, 48);
+  --selectionbg: rgb(168, 168, 168);
+  --bgcolor: #1a1a1a;
+  background-color: var(--bgcolor);
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.html {
+  
+  display: flex;
+  font-size: 150%;
+  height: 100%;
+  line-height: 1.75;
+  transition-property: background-color, color;
+  transition: 0.1s ease;
+  overflow: hidden;
+}
+
+
+body {
+  --column-width: 80ch;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 var(--column-width);
+  height: 100%;
+  margin: auto;
+  padding: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 0;
+  background-color: var(--bgcolor);
+  color: var(--regtext);
+}
+
+body::after {
+  background-image: linear-gradient(transparent, var(--bgcolor));
+  bottom: 1.5rem;
+  content: "";
+  height: 1.5rem;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+.greeting {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 12px;
+  padding-bottom: 15px;
+  opacity: 85%;
+}
+
+.greeting::after {
+  background-image: linear-gradient(var(--bgcolor), transparent);
+  content: "";
+  height: 1.5rem;
+  left: 0;
+  margin-top: 0.75rem;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+}
+
+.notepad {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: inherit;
+  flex: 1 1 100%;
+  font-family: var(--fontStack) !important;
+  margin-bottom: 1.5rem;
+  outline: none;
+  padding-top: 1.5rem;
+  resize: none;
+}
+
+
+
+
+
+.searchbar {
+  background-color: var(--formbg);
+  border-width: 7px;
+  border-color: var(--formborder);
+  width: 100%;
+  height: 80px;
+  border-radius: 5px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  margin-bottom: 10px;
+}
+
+.searchbar:hover {
+  background-color: var(--formhover);
+}
+
+input {
+  all: unset;
+  font: 18px system-ui;
+  height: 100%;
+  width: 100%;
+  padding: 6px 20px;
+}
+
+::placeholder {
+  color: var(--regtext);
+  opacity: 0.7; 
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  pointer-events: none;
+}
+
+/* SCROLLBAR width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--track);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--thumb);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--thumbhover);
+}
+
+.shortcutrow {
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shortcut {
+  height: 75px;
+  width: 75px;
+  border-radius: 15px;
+  background-color: var(--shortcutbg);
+  margin: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.space {
+  color: var(--med);
+  font-family: var(--fontStack);
+  margin-bottom: 0.75rem;
+  z-index: 1;
+}
+
+.shortcut .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--tooltipbg);
+  color: var(--tooltiptext);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  margin-top: 7px;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.shortcut:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+::selection {
+  color: var(--selection);
+  background: var(--selectionbg);
+}
+
+.shortcutimg {
+  height: 40px;
+  width: 40px;
+}
+
+.dark-mode-toggle {
+  position: absolute;
+  z-index: 100;
+  top: 1em;
+  right: 1em;
+  color: var(--regtext);
+  border: 2px solid currentColor;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
